@@ -24,7 +24,7 @@ GET /deck/deal/{deckid}
 
 Used to deal a card in deck of cards identified by deckid.
 Response 200 ok, along with card value
-e.g 200 ok, Clubs7
+e.g 200 ok, ClubsSEVEN
 
 DELETE /deck/delete/{deckid}
 
@@ -82,7 +82,7 @@ Step 2: Deck application setup
  
     # Checkout the source code
     
-    git checkout https://github.com/mdhilipan/card_shuffle_app.git
+    git clone https://github.com/mdhilipan/card_shuffle_app.git
     
     cd card_shuffle_app
     
