@@ -34,22 +34,29 @@ E.g
 
 curl -X PUT http://localhost:9000/deck - creates a deck , returns deckid , e.g a123456b5677989i23
 
-   Ex o/p 200 ok,"8031b9c9-8207-400b-ae42-d13f8170f833"
-
+            
+            
+            200 ok,"8031b9c9-8207-400b-ae42-d13f8170f833"
+            
+            
 curl -X POST http://localhost:9000/deck/shuffle/a123456b5677989i23 {substitute with deckid you got as a result of PUT in the first request} - shuffles a deck
      Arranges the cards in a different permutations.
      
-   Ex o/p : 200 ok, "Deck Shuffled"
+   Ex o/p : 
    
             400 Bad Request , if user sends an invalid deck id thats not yet created.
             
+            200 ok, "Deck Shuffled"
+            
 curl http://localhost:9000/deck/deal/a123456b5677989i23  {substitute with deckid you got as a result of PUT in the first request} - deals a card
 
-   Ex o/p : 200 ok,"DiamondsJACK"
+   Ex o/p : 
    
             400 Bad Request , if user sends an invalid deck id thats not yet created.
             
             406 Not Acceptible, if user sends deal requests more than number of cards, i.e if user sends more than 52 "deal" requests without shuffling it.
+            
+            200 ok,"DiamondsJACK"
             
 
 
