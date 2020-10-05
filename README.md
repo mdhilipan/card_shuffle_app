@@ -30,7 +30,7 @@ DELETE /deck/delete/{deckid}
 
 Used to delete a deck.
 
-Request/Response Samples:
+# Request/Response samples
 
 E.g 
 
