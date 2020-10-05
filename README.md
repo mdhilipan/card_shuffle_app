@@ -39,7 +39,7 @@ curl -X PUT http://localhost:9000/deck - creates a deck , returns deckid , e.g a
             200 ok,"8031b9c9-8207-400b-ae42-d13f8170f833"
             
             
-curl -X POST http://localhost:9000/deck/shuffle/a123456b5677989i23 {substitute with deckid you got as a result of PUT in the first request} - shuffles a deck
+curl -X POST http://localhost:9000/deck/shuffle/8031b9c9-8207-400b-ae42-d13f8170f833 {substitute with deckid you got as a result of PUT in the first request} - shuffles a deck
      Arranges the cards in a different permutations.
      
    Ex o/p : 
@@ -48,7 +48,7 @@ curl -X POST http://localhost:9000/deck/shuffle/a123456b5677989i23 {substitute w
             
             200 ok, "Deck Shuffled"
             
-curl http://localhost:9000/deck/deal/a123456b5677989i23  {substitute with deckid you got as a result of PUT in the first request} - deals a card
+curl http://localhost:9000/deck/deal/8031b9c9-8207-400b-ae42-d13f8170f833  {substitute with deckid you got as a result of PUT in the first request} - deals a card
 
    Ex o/p : 
    
