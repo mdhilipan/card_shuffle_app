@@ -66,13 +66,13 @@ The in memory hashmap is shared across all instances of the application.
 
 Step 1:MongoDB setup
 
-//pull the latest image from docker hub
+    //pull the latest image from docker hub
 
-docker pull mongo
+    docker pull mongo
 
-//Map the host port 27017 to docker container port 
+    //Map the host port 27017 to docker container port 
 
-docker run -p 27017:27017 mongo:latest 
+    docker run -p 27017:27017 mongo:latest 
 
 Step 2: Deck application setup
 
