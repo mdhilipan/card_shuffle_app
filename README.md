@@ -82,7 +82,25 @@ Step 2: Deck application setup
  
     # Checkout the source code
     
- 
+    git checkout https://github.com/mdhilipan/card_shuffle_app.git
+    
+    cd card_shuffle_app
+    
+    mvn clean install
+    
+    cd target
+    
+    #start instance 1
+    
+    java -jar -Dserver.port=9000 actuator-service-0.0.1-SNAPSHOT.jar
+    
+    #start instance 2(different port)
+    
+    java -jar -Dserver.port=9001 actuator-service-0.0.1-SNAPSHOT.jar
+
+    
+    
+    
 
 
 
