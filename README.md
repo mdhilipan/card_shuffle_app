@@ -33,10 +33,12 @@ Used to delete a deck.
 E.g 
 
 curl -X PUT http://localhost:9000/deck - creates a deck , returns deckid , e.g a123456b5677989i23
+
 curl -X POST http://localhost:9000/deck/shuffle/a123456b5677989i23 {substitute with deckid you got as a result of PUT in the first request} - shuffles a deck
      Arranges the cards in a different permutations.
    Ex o/p : 200 ok, "Deck Shuffled"
             400 Bad Request , if user sends an invalid deck id thats not yet created.
+            
 curl http://localhost:9000/deck/deal/a123456b5677989i23  {substitute with deckid you got as a result of PUT in the first request} - deals a card
    Ex o/p : 200 ok,"DiamondsJACK"
             400 Bad Request , if user sends an invalid deck id thats not yet created.
