@@ -65,14 +65,21 @@ The application relies on mongodb for physical storage and hazelcast for speed r
 The in memory hashmap is shared across all instances of the application.
 
 Step 1:MongoDB setup
+
 //pull the latest image from docker hub
+
 docker pull mongo
+
 //Map the host port 27017 to docker container port 
+
 docker run -p 27017:27017 mongo:latest 
 
 Step 2: Deck application setup
+
  The deck application has been developed in such a way that it can horizontally scale.
+ 
  You can start multiple instances of the application and send requests to different servers and any server can process any request.
+ 
     # Checkout the source code
     
  
