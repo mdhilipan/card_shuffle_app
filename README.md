@@ -34,7 +34,7 @@ Used to delete a deck.
 
 E.g 
 
-curl -X PUT http://localhost:9000/deck - creates a deck , returns deckid , e.g a123456b5677989i23
+curl -X PUT http://localhost:9000/deck - creates a deck , returns deckid , e.g 8031b9c9-8207-400b-ae42-d13f8170f833
 
             
             
@@ -60,6 +60,23 @@ curl http://localhost:9000/deck/deal/8031b9c9-8207-400b-ae42-d13f8170f833  {subs
             
             200 ok,"DiamondsJACK"
             
+# How to Run the application:
+The application relies on mongodb for physical storage and hazelcast for speed retreival and update of in memory hashmap.
+The in memory hashmap is shared across all instances of the application.
+
+Step 1:MongoDB setup
+//pull the latest image from docker hub
+docker pull mongo
+//Map the host port 27017 to docker container port 
+docker run -p 27017:27017 mongo:latest 
+
+Step 2: Deck application setup
+ The deck application has been developed in such a way that it can horizontally scale.
+ You can start multiple instances of the application and send requests to different servers and any server can process any request.
+    # Checkout the source code
+    
+ 
+
 
 
 
