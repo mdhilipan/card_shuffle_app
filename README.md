@@ -30,6 +30,8 @@ DELETE /deck/delete/{deckid}
 
 Used to delete a deck.
 
+Request/Response Samples:
+
 E.g 
 
 curl -X PUT http://localhost:9000/deck - creates a deck , returns deckid , e.g a123456b5677989i23
