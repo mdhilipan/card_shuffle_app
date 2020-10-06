@@ -25,7 +25,7 @@ public class HazelCastConfiguration {
         JoinConfig join = network.getJoin();//join the network of clusters
         join.getMulticastConfig().setEnabled(false);
         join.getTcpIpConfig()
-                .addMember("10.0.0.73").setEnabled(true);//add all instances of localhost as cluster
+                .addMember("localhost").setEnabled(true);//add all instances of localhost as cluster
         config.setInstanceName("hazelcast-instance")        // hazel case instance name
                 .addMapConfig(
                         new MapConfig()                     // create map
